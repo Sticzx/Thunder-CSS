@@ -10,8 +10,20 @@ body {
 }
 
 header {
+    display: flex;
     height: 15vh;
     padding: 1em;
+    justify-content: space-between;
+}
+
+img {
+    height: 100%;
+    display: block;
+}
+
+nav{
+    flex-basis: 90%;
+    padding-right: 5em;
 }
 
 nav > ul{
@@ -20,16 +32,38 @@ nav > ul{
     justify-content: center;
     justify-content: space-between;
     list-style-type: none;
+    height: 100%;
+}
+
+li {
+    display: grid;
+    justify-content: center;
+    place-content: center;
 }
 
 a {
     display: block;
-    padding: 1em;
-    font-size: 2em;
+    text-align: center;
+    color: white;
+    font-size: 3vh;
+    text-decoration: none;
 }
 
 main {
-    height: 85vh;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+article{
+    justify-content: center;
+    padding: 10em;
+    font-size: 2vh;
+}
+
+article > h2{
+    text-align: center;
+    margin: 1em ;
 }
 
 footer {
