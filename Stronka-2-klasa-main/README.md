@@ -1,1 +1,0 @@
-# Stronka-2-klasa
