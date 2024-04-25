@@ -1,0 +1,126 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: #070807;
+    color: #ffffff;
+}
+
+header {
+    display: flex;
+    height: 15vh;
+    padding: 1em;
+    justify-content: space-between;
+}
+
+.headerlogo{
+    position: relative;
+    width: 10%;
+}
+
+img {
+    height: 100%;
+    display: block;
+    max-width: auto;
+}
+
+.blur{
+    box-shadow: 0 0 50px 20px orange;
+    position: absolute;
+    top: 47%;
+    left: 39%;
+}
+
+nav{
+    flex-basis: 90%;
+    padding-left: 5em;
+    padding-right: 5em;
+}
+
+nav > ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-between;
+    list-style-type: none;
+    height: 100%;
+}
+
+li {
+    display: grid;
+    justify-content: center;
+    place-content: center;
+}
+
+a {
+    display: block;
+    text-align: center;
+    color: white;
+    font-size: 3vh;
+    text-decoration: none;
+}
+
+.gradient-text{
+    font-size: 8vh;
+    font-weight: bold;
+    background: linear-gradient(0deg, rgba(251,195,11,1) 32%, rgba(252,233,34,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    display: grid;
+    justify-content: center;
+    place-content: center;
+}
+
+main {
+    height: auto;
+}
+
+article{
+    padding: 10em;
+    padding-top: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+article > p {
+    font-size: 8vh;
+    font-weight: bold;
+    flex-basis: 50%;
+    color: white;
+}
+
+article > img {
+    flex-basis: 50%;
+    justify-content: center;
+}
+
+.main-blur{
+    box-shadow: 0 0 200px 75px orange;
+    position: absolute;
+    top: 50%;
+    left: 76%;   
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    background: linear-gradient(0deg, rgba(251,195,11,1) 32%, rgba(252,233,34,1) 100%);
+    color: #070807;
+    height: 40vh;
+    font-size: 1.3em;
+}
+
+footer > ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    list-style-type: none;
+}
