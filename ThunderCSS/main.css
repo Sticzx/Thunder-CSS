@@ -17,26 +17,21 @@ header {
     justify-content: space-between;
 }
 
-.headerlogo{
-    position: relative;
-    width: 10%;
-}
-
-img {
+header img {
     height: 100%;
     display: block;
-    max-width: auto;
+    max-width: 150px;
 }
 
 .blur{
     box-shadow: 0 0 50px 20px orange;
     position: absolute;
-    top: 47%;
-    left: 39%;
+    top: 50%;
+    left: 50%;
 }
 
 nav{
-    flex-basis: 90%;
+    flex-basis: 75%;
     padding-left: 5em;
     padding-right: 5em;
 }
@@ -44,8 +39,8 @@ nav{
 nav > ul{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    justify-content: space-between;
+    justify-content: flex-end;
+    gap: 5rem;
     list-style-type: none;
     height: 100%;
 }
@@ -59,14 +54,29 @@ li {
 a {
     display: block;
     text-align: center;
+    position: relative;
     color: white;
-    font-size: 3vh;
+    font-size: 2.2vh;
     text-decoration: none;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(270deg, rgb(182, 140, 2) 32%, rgba(252,233,34,1) 100%);
+    transition: all 0.25s ease-out;
+}
+
+a:hover::after {
+    width: 100%;
 }
 
 .gradient-text{
     font-size: 8vh;
-    font-weight: bold;
     background: linear-gradient(0deg, rgba(251,195,11,1) 32%, rgba(252,233,34,1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -77,35 +87,22 @@ a {
     place-content: center;
 }
 
-main {
-    height: auto;
-}
-
-article{
-    padding: 10em;
-    padding-top: 2em;
+.container{
+    padding: 7em;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-article > p {
-    font-size: 8vh;
-    font-weight: bold;
-    flex-basis: 50%;
-    color: white;
-}
-
-article > img {
-    flex-basis: 50%;
-    justify-content: center;
+.img-area{
+    position: relative;
 }
 
 .main-blur{
     box-shadow: 0 0 200px 75px orange;
     position: absolute;
     top: 50%;
-    left: 76%;   
+    left: 50%;   
 }
 
 footer {
