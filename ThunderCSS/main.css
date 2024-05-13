@@ -12,9 +12,12 @@ body {
 
 header {
     display: flex;
+    /* position: fixed; */
     height: 15vh;
     padding: 1em;
     justify-content: space-between;
+    z-index: 1;
+    background-color: #070807;
 }
 
 header img {
@@ -87,7 +90,7 @@ a:hover::after {
     place-content: center;
 }
 
-.container{
+.main{
     padding: 7em;
     display: flex;
     flex-direction: row;
@@ -103,6 +106,19 @@ a:hover::after {
     position: absolute;
     top: 50%;
     left: 50%;   
+}
+
+.container{
+    padding: 7em;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+h2 {
+    text-align: center;
+    padding: 2em;
 }
 
 footer {
