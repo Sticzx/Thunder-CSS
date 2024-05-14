@@ -5,22 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS TRAIN</title>
+    <title>THUNDER CSS</title>
 </head>
 <body>
-    <header id="Home">
+    <header>
             <img src="thunder.png" alt="logo">
         <nav>
             <ul>
                 <li><a href="#Home">Home</a></li>
                 <li><a href="#about">About us</a></li>
                 <li><a href="#Contact">Contact</a></li>
-                <li><a href="">Login</a></li>
+                <li><a href="login.html" class="login">Login</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <div class="main">
+        <div class="main" id="Home">
             <h1 class="gradient-text">
                 Thunder
                 <p>
@@ -33,13 +33,25 @@
             </div>
         </div>
         <div class="container" id="about">
-            <h2>About us</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla nam labore, assumenda tempore libero facere beatae, soluta saepe, in eius accusamus rem dolores iure omnis fuga harum veritatis dolore eligendi quia ea! Omnis, nobis sed aut quia fuga earum pariatur quod autem repudiandae laborum, est nostrum impedit voluptate mollitia quos repellat excepturi maxime. Incidunt voluptate soluta consequuntur fugiat officia officiis inventore veniam, ab distinctio repellat et dolores expedita modi ratione, tempore sapiente aliquid maxime eaque sed facilis enim qui deleniti molestias pariatur. Ut perspiciatis nostrum tempora explicabo iure eum dicta nemo velit corporis reprehenderit a ipsa cumque, maxime saepe laborum.</p>
+            <h2 class="gradient-text">About us</h2>
+            <p>Welcome to Thunder CSS, the cutting-edge CSS framework that’s as swift as lightning! Born from the innovative minds of seasoned front-end developers, Thunder CSS is the newest player in the technology arena, designed to transform the way developers create responsive, high-performance websites.
+
+                At Thunder CSS, we believe that speed and efficiency are crucial in the digital age. That's why our framework is engineered to offer unparalleled performance and ease of use, ensuring that your projects not only look fantastic but also run smoothly across all devices. Our intuitive syntax and powerful features enable developers to build aesthetically pleasing interfaces faster than ever before.
+                
+                Harnessing the latest advancements in CSS technology, Thunder CSS incorporates smart design choices that reduce the common frustrations associated with front-end development. Whether you’re a professional developer or a hobbyist, our framework provides all the tools needed to unleash your creativity without the usual complexities.
+                
+                Join us in revolutionizing the front-end development landscape. With Thunder CSS, empower your projects with the speed of lightning, and bring your ideas to life with the most advanced and efficient CSS framework on the market. Experience the future of website development—experience Thunder CSS, where speed meets innovation!</p>
         </div>
         <div class="container" id="Contact">
-            <h2>Contact</h2>
-            <form>
-                
+            <h2 class="gradient-text">Contact</h2>
+            <form action="#" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+                <input type="submit" value="Send" class="submit">
             </form>
         </div>
     </main>
