@@ -11,11 +11,6 @@
     <header>
         <img src="thunder.png" alt="logo">
         <nav>
-            <div class="burger-menu">
-                <span class="bar1"></span>
-                <span class="bar2"></span>
-                <span class="bar3"></span>
-             </div>
             <ul>
                 <li><a href="#Home">Home</a></li>
                 <li><a href="#about">About us</a></li>
@@ -23,6 +18,17 @@
                 <li><a href="index.html" class="login">Login</a></li>
             </ul>
         </nav>
+        <div class="burger" onclick="toggleMobileMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <ul class="mobile-menu">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#about">About us</a></li>
+                <li><a href="#Contact">Contact</a></li>
+                <li><a href="index.html" class="login">Login</a></li>
+            </ul>
+        </div>
     </header>
     <main>
         <span id="Home"></span>
@@ -65,12 +71,6 @@
             <li>Documentation</li>
             <li>Partnership</li>
             <li>Privacy policy</li>
-        </ul>
-        <ul>
-            <h3>You can donate here!</h3>
-            <li>Paypal</li>
-            <li>BLIK</li>
-            <li>Transaction</li>
         </ul>
         <ul>
             <h3>&copy; 2024 Mateusz Sycz</h3>

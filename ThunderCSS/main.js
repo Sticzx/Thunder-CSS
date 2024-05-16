@@ -29,11 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
     registerButton.classList.add('inactive');
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const burgerMenu = document.querySelector('.burger-menu');
-    const navLinks = document.querySelector('nav ul');
-
-    burgerMenu.addEventListener('click', function() {
-        navLinks.classList.toggle('active');
-    });
-});
+function toggleMobileMenu(menu) {
+    menu.classList.toggle('open');
+}

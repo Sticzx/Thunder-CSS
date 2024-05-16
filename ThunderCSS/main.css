@@ -247,32 +247,52 @@ footer ul li {
     text-align: center;
 }
 
-.burger-menu {
+.burger{
+    margin: 25px 50px;
     display: none;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 30px;
     cursor: pointer;
+    position: absolute;
+    right: 0;
+    padding: 0 10px;
 }
 
-.burger-menu .bar1, .burger-menu .bar2, .burger-menu .bar3 {
-    width: 100%;
-    height: 4px;
+.burger div{
+    width: 35px;
+    height: 3px;
     background-color: white;
-    transition: 0.3s;
+    margin: 6px 0;
+    transition: .5s;
 }
 
-.burger-menu-active .bar1 {
-    transform: translate(0, 11px) rotate(-45deg);
+.open .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
 }
 
-.burger-menu-active .bar2{
+.open .bar2 {
     opacity: 0;
 }
 
-.burger-menu-active .bar3 {
-    transform: translate(0, -11px) rotate(45deg);
+.open .bar3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: -50%;
+    right:550%;
+    height: 300px;
+    padding: 1em;
+    width: 110%;
 }
 
 .form-container {
@@ -426,48 +446,31 @@ footer ul li {
 
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     header {
         height: auto;
     }
 
-    .burger-menu {
-        display: block;
-        cursor: pointer;
+    .main .gradient-text{
+        font-size: 5vh;
     }
 
-    nav ul {
-        display: none;
-    }
-
-    nav ul.active {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    text-align: center;
-    }
-
-    nav ul.active li {
-    margin: 10px 0;
-    }
-
-    nav ul li {
-        width: 100%;
-        text-align: center;
-    }
-
-    nav ul li a {
-        display: block;
-        padding: 15px 0;
-        text-decoration: none;
-        color: #ffffff;
-        font-size: 2vh;
+    .mobile-menu {
+        right:100%;
+        height: 100em;
     }
 
     .gradient-text {
         font-size: 4vh;
         text-align: center;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    nav {
+        display: none;
     }
 
     .main {
