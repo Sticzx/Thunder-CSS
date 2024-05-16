@@ -5,78 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THUNDER CSS</title>
+    <title>Login | Register</title>
 </head>
 <body>
     <header>
-            <img src="thunder.png" alt="logo">
-        <nav>
-            <ul>
-                <li><a href="#Home">Home</a></li>
-                <li><a href="#about">About us</a></li>
-                <li><a href="#Contact">Contact</a></li>
-                <li><a href="login.html" class="login">Login</a></li>
-            </ul>
-        </nav>
+        <img src="thunder.png" alt="logo">
     </header>
     <main>
-        <div class="main" id="Home">
-            <h1 class="gradient-text">
-                Thunder
-                <p>
-                    The newest frontend Technology
-                </p>
-            </h1>
-            <div class="img-area">
-                <img src="thunder.png" alt="piorun">
-                <span class="main-blur"></span>
+        <div class="form-container">
+            <div class="toggle-buttons">
+                <button onclick="toggleForm(false)">Login</button>
+                <button onclick="toggleForm(true)">Register</button>
+            </div>
+            <div id="loginForm" style="display: block;">
+                <h2>Login</h2>
+                <form action="home.html">
+                    <input type="email" id="login-email" placeholder="E-mail" required>
+                    <input type="password" id="login-password" placeholder="Password" required>
+                    <input type="submit" value="Login" class="submit" href="index.html">
+                </form>
+            </div>
+            <div id="registerForm" style="display: none;">
+                <h2>Sign up</h2>
+                <form action="home.html">
+                    <input type="email" id="register-email" placeholder="E-mail" required>
+                    <input type="password" id="register-password" placeholder="Password" required>
+                    <input type="password" id="register-confirm-password" placeholder="Confirm password" required>
+                    <input type="submit" value="Sing up" class="submit">
+                </form>
             </div>
         </div>
-        <div class="container" id="about">
-            <h2 class="gradient-text">About us</h2>
-            <p>Welcome to Thunder CSS, the cutting-edge CSS framework that’s as swift as lightning! Born from the innovative minds of seasoned front-end developers, Thunder CSS is the newest player in the technology arena, designed to transform the way developers create responsive, high-performance websites.
-
-                At Thunder CSS, we believe that speed and efficiency are crucial in the digital age. That's why our framework is engineered to offer unparalleled performance and ease of use, ensuring that your projects not only look fantastic but also run smoothly across all devices. Our intuitive syntax and powerful features enable developers to build aesthetically pleasing interfaces faster than ever before.
-                
-                Harnessing the latest advancements in CSS technology, Thunder CSS incorporates smart design choices that reduce the common frustrations associated with front-end development. Whether you’re a professional developer or a hobbyist, our framework provides all the tools needed to unleash your creativity without the usual complexities.
-                
-                Join us in revolutionizing the front-end development landscape. With Thunder CSS, empower your projects with the speed of lightning, and bring your ideas to life with the most advanced and efficient CSS framework on the market. Experience the future of website development—experience Thunder CSS, where speed meets innovation!</p>
-        </div>
-        <div class="container" id="Contact">
-            <h2 class="gradient-text">Contact</h2>
-            <form action="#" method="POST">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="4"></textarea>
-                <input type="submit" value="Send" class="submit">
-            </form>
-        </div>
     </main>
-    <footer>
-        <ul>
-            <h3>asdsad</h3>
-            <li>sada</li>
-            <li>asdsa</li>
-            <li>sadsa</li>
-        </ul>
-        <ul>
-            <h3>asdsa</h3>
-            <li>dsds</li>
-            <li>dsds</li>
-            <li>dsdsds</li>
-        </ul>
-        <ul>
-            <h3>dsds</h3>
-            <li>sds</li>
-            <li>ds</li>
-            <li>sds</li>
-        </ul>
-        <ul>
-            <h3>&copy; Mateusz Sycz</h3>
-        </ul>
-    </footer>
+    <script src="main.js"></script>
 </body>
 </html>
