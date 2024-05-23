@@ -19,7 +19,7 @@
                 <button onclick="toggleForm(false)">Login</button>
                 <button onclick="toggleForm(true)">Sign up</button>
             </div>
-            <div id="loginForm" style="display: block;">
+            <div id="loginForm" class="animate fade-in" style="display: block;">
                 <h2>Login</h2>
                 <form action="home.html">
                     <input type="email" id="login-email" placeholder="E-mail" required>
@@ -27,13 +27,13 @@
                     <input type="submit" value="Login" class="submit" href="index.html">
                 </form>
             </div>
-            <div id="registerForm" style="display: none;">
+            <div id="registerForm" class="animate fade-out" style="display: none;">
                 <h2>Sign up</h2>
                 <form action="home.html">
                     <input type="email" id="register-email" placeholder="E-mail" required>
                     <input type="password" id="register-password" placeholder="Password" required>
                     <input type="password" id="register-confirm-password" placeholder="Confirm password" required>
-                    <input type="submit" value="Sing up" class="submit">
+                    <input type="submit" value="Sign up" class="submit">
                 </form>
             </div>
         </div>

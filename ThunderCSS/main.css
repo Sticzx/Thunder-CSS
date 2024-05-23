@@ -7,15 +7,18 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
 body {
     box-sizing: border-box;
     background-color: #070807;
     color: #ffffff;
+    width: 100%;
+    overflow-x: hidden;
 }
 
-header {
+ header {
     display: flex;
     position: fixed;
     top: 0;
@@ -26,12 +29,13 @@ header {
     justify-content: space-between;
     z-index: 1;
     background-color: #070807;
-}
+} 
 
 header img {
     height: 100%;
     display: block;
     max-width: 200px;
+    z-index: 100;
 }
 
 #Home {
@@ -44,7 +48,7 @@ nav {
     padding-left: 5em;
     padding-right: 5em;
     position: relative;
-}
+} 
 
 nav > ul {
     display: flex;
@@ -59,7 +63,7 @@ li {
     display: grid;
     justify-content: center;
     place-content: center;
-}
+} 
 
 a {
     display: block;
@@ -85,7 +89,7 @@ a:hover::after {
     width: 100%;
 }
 
-.login {
+.login{
     border: 1px solid black;
     padding: 1em;
     color: black;
@@ -102,6 +106,11 @@ a:hover::after {
 
 .login:hover::after {
     width: 0;
+} 
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+  display: none;
 }
 
 .gradient-text {
@@ -149,13 +158,17 @@ a:hover::after {
     transform: translate(-50%, -50%);
 }
 
-.container {
+main .container {
     padding: 7em;
     height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    line-height: 1.3rem;
+    line-height: 2.3rem;
+}
+
+main p{
+    font-size: 2vh;
 }
 
 #Contact {
@@ -218,11 +231,13 @@ input:focus, textarea:focus {
 footer {
     display: flex;
     justify-content: space-evenly;
-    background: linear-gradient(0deg, rgba(251,195,11,1) 32%, rgba(252,233,34,1) 100%);
-    color: #070807;
+    background-color: #070807;
+    border-top: 3px solid rgba(251,195,11,1);
+    color: white;
     height: 30vh;
     font-size: 1.3em;
     padding: 20px;
+    width: 100%;
     align-items: flex-start;
 }
 
@@ -247,51 +262,13 @@ footer ul li {
     text-align: center;
 }
 
-.burger{
-    margin: 25px 50px;
-    display: none;
+footer ul li:hover {
+    color: #bbbbbb;
+    transition: color 0.3s ease-in-out;
     cursor: pointer;
-    position: relative;
-    right: 0;
-    padding: 0 10px;
 }
 
-.burger div{
-    width: 35px;
-    height: 3px;
-    background-color: white;
-    margin: 6px 0;
-    transition: .5s;
-}
-
-.open .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
-    transform: rotate(-45deg) translate(-6px, 6px);
-}
-
-.open .bar2 {
-    opacity: 0;
-}
-
-.open .bar3 {
-    -webkit-transform: rotate(45deg) translate(-6px, -8px);
-    transform: rotate(45deg) translate(-6px, -8px);
-}
-
-.open .mobile-menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.mobile-menu {
-    display: none;
-    position: absolute;
-    z-index: 10;
-    width: 100vw;
-    justify-content: center;
-}
+/*  LOGIN | REGISTER */
 
 .form-container {
     display: flex;
@@ -319,14 +296,13 @@ footer ul li {
     transition: all 0.1s ease-out;
     justify-content: center;
     font-weight: bold;
+    cursor: pointer;
+    opacity: 0.5; 
 }
 
 .toggle-buttons button.active {
-    opacity: 1;
-}
-
-.toggle-buttons button.inactive {
-    opacity: 0.5;
+    opacity: 1; 
+    background: linear-gradient(0deg, rgba(251,195,11,1) 32%, rgba(252,233,34,1) 100%);
 }
 
 .toggle-buttons button:not(:last-child) {
@@ -359,6 +335,93 @@ footer ul li {
 
 .form-container .submit{
     color: black;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutToRight {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+@keyframes slideOutToLeft {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+.animate {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px); 
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.slide-in-from-right {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    animation: slideInFromRight 0.5s forwards;
+}
+
+.slide-in-from-left {
+    animation: slideInFromLeft 0.5s forwards;
+}
+
+.slide-out-to-right {
+    animation: slideOutToRight 0.5s forwards;
+}
+
+.slide-out-to-left {
+    animation: slideOutToLeft 0.5s forwards;
 }
 
 @media (max-width: 1200px){
@@ -446,32 +509,115 @@ footer ul li {
 
 @media only screen and (max-width: 768px) {
     header {
-        height: auto;
+        height: 100px;
+        justify-content: space-between;
+        padding: 0 20px;
+        width: 100%;
+        box-sizing: border-box;
+        top: 0;
+        left: 0;
     }
 
     .main .gradient-text{
         font-size: 5vh;
     }
 
-    .mobile-menu {
-        justify-content: center;
-        align-items: center;
-        right: 1px;
-        left: 1px;
-    }
-
     .gradient-text {
         font-size: 4vh;
         text-align: center;
     }
-
-    .burger {
+    
+      input[type="checkbox"],
+      .hamburger-lines {
         display: block;
-    }
+      }
+    
+      .navbar {
+        display: block;
+        position: relative;
+        height: 64px;
+      }
+    
+      .navbar input[type="checkbox"] {
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 30px;
+        top: 20px;
+        right: 20px;
+        z-index: 5;
+        opacity: 0;
+      }
+    
+      .navbar .hamburger-lines {
+        display: block;
+        height: 23px;
+        width: 35px;
+        position: absolute;
+        top: 17px;
+        right: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    
+      .navbar .hamburger-lines .line {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: white;
+      }
+    
+      .navbar .hamburger-lines .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+      }
+    
+      .navbar .hamburger-lines .line2 {
+        transition: transform 0.2s ease-in-out;
+      }
+    
+      .navbar .hamburger-lines .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+      }
+    
+      .navbar .menu-items {
+        padding-top: 200px;
+        background: #070807;
+        height: 10vh;
+        gap: 2rem;
+        width: 100%;
+        transform: translate(-150%);
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.5s ease-in-out;
+        position: fixed;
+        top: 0;
+        right: 0;
+      }
 
-    nav {
-        display: none;
-    }
+      .login{
+        margin-bottom: 1rem;
+      }
+    
+      .navbar input[type="checkbox"]:checked ~ .menu-items {
+        transform: translateX(0);
+      }
+    
+      .navbar input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+        transform: rotate(35deg);
+      }
+    
+      .navbar input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+        transform: scaleY(0);
+      }
+    
+      .navbar input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+        transform: rotate(-35deg);
+      }
 
     .main {
         margin-top: 12vh;
@@ -494,6 +640,10 @@ footer ul li {
 
     input, textarea {
         flex-basis: 80%;
+    }
+
+    #about{
+        height: auto;
     }
 
     .form-container {
@@ -544,6 +694,12 @@ footer ul li {
         font-size: 1.8vh;
         height: auto;
         padding: 1.5em;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    footer ul {
+        padding: 1rem;
     }
 
 }

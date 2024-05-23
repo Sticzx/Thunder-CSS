@@ -10,43 +10,38 @@
     <title>THUNDER CSS</title>
 </head>
 <body>
-    <header>
+    <header class="animate" data-animation="fade-in">
         <img src="thunder.png" alt="logo">
-        <nav>
-            <ul>
+        <nav class="navbar">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
                 <li><a href="#Home">Home</a></li>
                 <li><a href="#about">About us</a></li>
                 <li><a href="#Contact">Contact</a></li>
                 <li><a href="index.html" class="login">Login</a></li>
             </ul>
         </nav>
-        <div class="burger" onclick="toggleMobileMenu(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-            <ul class="mobile-menu">
-                <li><a href="#Home">Home</a></li>
-                <li><a href="#about">About us</a></li>
-                <li><a href="#Contact">Contact</a></li>
-                <li><a href="index.html" class="login">Login</a></li>
-            </ul>
-        </div>
     </header>
     <main>
         <span id="Home"></span>
-        <div class="main">
+        <div class="main animate" data-animation="fade-in">
             <h1 class="gradient-text">
                 Thunder
                 <span>
                     The newest frontend Technology
                 </span>
             </h1>
-            <div class="img-area">
+            <div class="img-area animate" data-animation="slide-in-from-right">
                 <img src="thunder.png" alt="piorun">
                 <span class="main-blur"></span>
             </div>
         </div>
-        <div class="container" id="about">
+        <div class="container animate" data-animation="fade-in" id="about">
             <h2 class="gradient-text">About us</h2>
             <p>Welcome to Thunder CSS, the cutting-edge CSS framework that’s as swift as lightning! Born from the innovative minds of seasoned front-end developers, Thunder CSS is the newest player in the technology arena, designed to transform the way developers create responsive, high-performance websites.
 
@@ -56,7 +51,7 @@
                 
                 Join us in revolutionizing the front-end development landscape. With Thunder CSS, empower your projects with the speed of lightning, and bring your ideas to life with the most advanced and efficient CSS framework on the market. Experience the future of website development—experience Thunder CSS, where speed meets innovation!</p>
         </div>
-        <div class="container" id="Contact">
+        <div class="container animate" data-animation="fade-in" id="Contact">
             <h2 class="gradient-text">Contact</h2>
             <form action="#">
                 <input type="text" id="name" name="name" required placeholder="Name">
@@ -66,16 +61,16 @@
             </form>
         </div>
     </main>
-    <footer>
+    <footer class="animate" data-animation="fade-in">
         <ul>
-            <li><h3>Everything about project</h3></li>
+            <h3>Everything about project</h3>
             <li>FAQ</li>
             <li>Documentation</li>
             <li>Partnership</li>
             <li>Privacy policy</li>
         </ul>
         <ul>
-            <li><h3>&copy; 2024 Mateusz Sycz</h3></li>
+            <h3>&copy; 2024 Mateusz Sycz</h3>
             <li>All Rights Reserved.</li>
             <li>Designed by Thunder CSS team</li>
         </ul>
