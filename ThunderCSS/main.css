@@ -32,7 +32,6 @@ body {
     background-color: #070807;
     color: #ffffff;
     width: 100%;
-    overflow-x: hidden;
 }
 
 header {
@@ -575,6 +574,7 @@ footer ul li:hover {
 }
 
 @media only screen and (max-width: 768px) {
+
     header {
         height: 100px;
         justify-content: space-between;
@@ -583,6 +583,10 @@ footer ul li:hover {
         box-sizing: border-box;
         top: 0;
         left: 0;
+    }
+
+    main {
+        padding: 0.2em;
     }
 
     .main .gradient-text{
@@ -697,9 +701,8 @@ footer ul li:hover {
       }
 
     .main {
+        padding: 0;
         margin-top: 12vh;
-        padding: 3em;
-        padding-top: 0;
         flex-direction: column-reverse;
     }
 
@@ -725,6 +728,31 @@ footer ul li:hover {
 
     #Pricing {
         height: auto;
+    }
+
+    .pricing-table {
+        width: 100%;
+        max-width: 400px;
+        top: 0;
+        left: 0;
+        border-collapse: collapse;
+    }
+    
+    .pricing-table th, .pricing-table td {
+        padding: 3px;
+        text-align: center;
+    }
+    
+    .pricing-table .header {
+        font-size: 1.3vh;
+    }
+    
+    .pricing-table .price {
+        font-size: 1.3vh;
+    }
+    
+    .pricing-table .feature {
+        font-size: 1vh;
     }
 
     .form-container {
